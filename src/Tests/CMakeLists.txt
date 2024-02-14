@@ -50,7 +50,7 @@ quick_test(MiddlewareTest zynaddsubfx_core zynaddsubfx_nio
 
 #Testbed app
 
-if(NOT (${CMAKE_SYSTEM_NAME} STREQUAL "Windows") AND NOT (${CMAKE_SYSTEM_NAME} STREQUAL "Darwin") )
+if(NOT ( (${CMAKE_SYSTEM_NAME} STREQUAL "Windows") OR (${CMAKE_SYSTEM_NAME} STREQUAL "Darwin") ) )
 
     #std::thread issues with mingw vvvvv
     quick_test(MqTest           ${test_lib})
